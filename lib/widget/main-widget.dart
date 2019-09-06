@@ -45,18 +45,34 @@ class _MainWidgetState extends State<MainWidget> with SingleTickerProviderStateM
         ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(40),
-          child: TabBar(
-            controller: _tabController,
-            tabs: <Widget>[
-              Tab(
-                text: "CONVERSAS",
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                padding: EdgeInsets.all(0),
+                icon: Icon(
+                    Icons.camera_alt
+                ),
               ),
-              Tab(
-                text: "STATUS"
+              Expanded(
+                child: TabBar(
+                  controller: _tabController,
+                  labelPadding: EdgeInsets.all(0),
+                  tabs: <Widget>[
+                    Tab(
+                      text: "CONVERSAS",
+                    ),
+                    Tab(
+                      text: "STATUS"
+                    ),
+                    Tab(
+                      text: "CHAMADAS",
+                    )
+                  ],
+                ),
               ),
-              Tab(
-                text: "CHAMADAS",
-              )
             ],
           ),
         ),
