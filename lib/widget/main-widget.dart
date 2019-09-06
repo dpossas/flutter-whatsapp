@@ -37,40 +37,8 @@ class _MainWidgetState extends State<MainWidget> with SingleTickerProviderStateM
             icon: Icon(
                 Icons.more_vert
             ),
-
             itemBuilder: (context){
-              return [
-                const PopupMenuItem(
-                  child: Text(
-                    "Novo Grupo"
-                  ),
-                ),
-                const PopupMenuItem(
-                  child: Text(
-                      "Nova Transmissão"
-                  ),
-                ),
-                const PopupMenuItem(
-                  child: Text(
-                      "WhatsApp Web"
-                  ),
-                ),
-                const PopupMenuItem(
-                  child: Text(
-                      "Mensagens Favoritas"
-                  ),
-                ),
-                const PopupMenuItem(
-                  child: Text(
-                      "Configurações"
-                  ),
-                ),
-                //Novo Grupo
-                //Nova Trans
-                //Whatsapp web
-                //Mens Fav
-                //Configura
-              ];
+              return _moreMenuOptions();
             },
           ),
         ],
@@ -107,5 +75,35 @@ class _MainWidgetState extends State<MainWidget> with SingleTickerProviderStateM
         ],
       ),
     );
+  }
+
+  List<PopupMenuItem> _moreMenuOptions() {
+    return [
+      const PopupMenuItem(
+        child: Text(
+            "Novo Grupo"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Nova Transmissão"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "WhatsApp Web"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Mensagens Favoritas"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Configurações"
+        ),
+      ),
+    ];
   }
 }
