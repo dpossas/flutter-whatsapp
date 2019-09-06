@@ -40,6 +40,7 @@ class _MainWidgetState extends State<MainWidget> with SingleTickerProviderStateM
             itemBuilder: (context){
               return _moreMenuOptions();
             },
+            offset: Offset(0,60),
           ),
         ],
         bottom: PreferredSize(

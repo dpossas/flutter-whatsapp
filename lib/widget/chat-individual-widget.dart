@@ -114,6 +114,7 @@ class ChatIndividualWidget extends StatelessWidget {
             itemBuilder: (context){
               return _moreMenuOptions();
             },
+            offset: Offset(0,60),
           ),
         ],
       ),
