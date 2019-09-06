@@ -107,12 +107,14 @@ class ChatIndividualWidget extends StatelessWidget {
                 Icons.phone
             ),
           ),
-          IconButton(
-            onPressed: (){},
+          PopupMenuButton(
             icon: Icon(
                 Icons.more_vert
             ),
-          )
+            itemBuilder: (context){
+              return _moreMenuOptions();
+            },
+          ),
         ],
       ),
       body: Container(
@@ -154,5 +156,35 @@ class ChatIndividualWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<PopupMenuItem> _moreMenuOptions() {
+    return [
+      const PopupMenuItem(
+        child: Text(
+            "Ver contato"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Mídia"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Buscar"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Silenciar notificações"
+        ),
+      ),
+      const PopupMenuItem(
+        child: Text(
+            "Papel de parede"
+        ),
+      ),
+    ];
   }
 }
